@@ -322,7 +322,7 @@ static void print_calendar(const struct icaltimetype start,
 		print_event(events[i], do_description, do_location);
       }
 
-      printf("</table>\n<!-- PAGE BREAK -->\n");
+      printf("</table> </div> \n");
     }
 
   }

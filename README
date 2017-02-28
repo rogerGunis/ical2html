@@ -1,0 +1,100 @@
+ical2html takes an iCalendar file and outputs an HTML file showing one
+or more months in the form of tables. Requires libical.
+
+    0. Compiling from source
+    1. Downloading and compiling from CVS
+    2. Updating to the latest CVS version
+    3. Command line options
+    4. Style sheet (calendar.css)
+    
+
+
+0) Compiling from source
+------------------------
+
+Download and unpack the ical2html-XXX.tar.gz file (where XXX is the
+version number), go into the ical2html-XXX directory and type:
+
+    $ ./configure
+    $ make
+
+You may want to run ./configure --help first, to see what options are
+available. Or read INSTALL for general information about the configure
+process.
+
+
+1) Compiling from CVS
+---------------------
+
+First get the sources, begin by setting up CVS:
+
+    $ CVSROOT=:pserver:anonymous@dev.w3.org:/sources/public
+    $ export CVSROOT
+    $ cvs login
+
+When prompted for a password, enter "anonymous" (without the
+quotes). Then let CVS download the sources:
+
+    $ cvs get Ical2html
+
+Then configure and compile. This requires automake and autoconf to be
+installed:
+
+    $ cd Ical2html
+    $ autoreconf -i
+    $ ./configure
+    $ make
+
+If "configure" complains about "libical", look for libical-dev or
+libical in the software repository for your operating system, or
+download it from http://softwarestudio.org/libical/ or
+http://sourceforge.net/projects/freeassociation/. Ical2html was
+developed with libical versions 0.43 and 1.0.
+
+Debian 5.0 (Lenny)
+    The version of libical in Debian Lenny is 0.31 and doesn't work
+    with ical2html. But the libical from Debian Backports
+    (http://www.backports.org/) does.
+
+Max OS X
+    If you installed libical from MacPorts (http://www.macports.org/),
+    you'll need to tell configure where the header files and libraries
+    are. Run configure as follows (all on one line):
+
+    CFLAGS="-I/opt/local/include -I/opt/local/include/libical
+    -L/opt/local/lib" ./configure
+
+If you managed to compile, but the program fails to run with an error
+about "libical.so" not found, try to set the variable
+"LD_LIBRARY_PATH" before running ical2html, e.g.:
+
+    $ LD_LIBRARY_PATH=/path/to/lib ical2html
+
+
+2) Updating to the latest CVS version
+-------------------------------------
+
+If you have a version of ical2html already and want to update it to
+the latest version:
+
+    $ cd Ical2html
+    $ cvs -d :pserver:anonymous@dev.w3.org:/sources/public update
+
+If you are asked for a password, answer "anonymous"
+
+
+3) [Explain ical2html options]
+------------------------------
+
+4) [Explain that the created HTML file links to "calendar.css"]
+---------------------------------------------------------------
+
+[An example "calendar.css" in included]
+
+[Write manual...]
+
+
+
+
+Created: 28 Sep 2002
+Modified: $Date: 2015/08/14 23:43:00 $

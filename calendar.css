@@ -78,3 +78,21 @@ p.Phone-Call {color: #909}
 p.Travel {color: #069}
 
 span.categories {display: none}
+td.round1 { 
+    background: #efef99
+    }
+td.round2 { 
+    background: #ffcbb3
+    }
+td.round3 { 
+    background: #efef99
+    }
+td.round4 { 
+    background: #ffcbb3
+    }
+td.round5 { 
+    background: #efef99
+    }
+td.round6 { 
+    background: #ffcbb3
+    }

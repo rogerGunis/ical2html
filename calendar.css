@@ -33,9 +33,15 @@ caption {
     font-size: xx-large;
     font-weight: bold}
 p.date {
+    color: #9C2727;
+    font-size: 1em;
+    margin-bottom: -1.3em;
+    font-weight: bold;
+    text-align: right}
+p.date.vevent{
     color: #DDD;
-    font-size: 4em;
-    margin-bottom: -1em;
+    font-size: 1em;
+    margin-bottom: -1.3em;
     font-weight: bold;
     text-align: right}
 pre {
@@ -61,9 +67,9 @@ span.notime { display: none }
 span.time { font-weight: bold }
 
 div.vevent {
-    margin: 0.3em 0;
+    margin: 0.3em;
     padding-left: 0.6em;
-    text-indent: -0.6em}
+    text-indent: -0.9em}
 
 div.vevent {color: #666}		/* Default */
 p.Birthday {color: #C66}
@@ -96,3 +102,13 @@ td.round5 {
 td.round6 { 
     background: #ffcbb3
     }
+td.td_1 > p {
+    color: #FFF;
+    }
+td.td_7 > p {
+    color: #FFF;
+    }
+td.td_1 > div,td.td_7 > div {
+    margin: 2em;
+    padding-left: 0.6em;
+    text-indent: -0.9em}

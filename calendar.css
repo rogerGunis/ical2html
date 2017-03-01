@@ -1,6 +1,6 @@
 body { 
     background: #FFF;
-    background: #CCC;
+    background: #FFF;
     color: #000;
     line-height: 1;
     font-family: sans-serif }
@@ -88,19 +88,7 @@ td.round1 {
     background: #efef99
     }
 td.round2 { 
-    background: #ffcbb3
-    }
-td.round3 { 
-    background: #efef99
-    }
-td.round4 { 
-    background: #ffcbb3
-    }
-td.round5 { 
-    background: #efef99
-    }
-td.round6 { 
-    background: #ffcbb3
+    background: rgba(255, 203, 179, 0.27)
     }
 td.td_1 > p {
     color: #FFF;

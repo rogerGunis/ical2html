@@ -45,16 +45,17 @@ p.date.vevent{
     font-weight: bold;
     text-align: right}
 pre {
-    display: none;
+    /*display: none;*/
     font-family: sans-serif;
-    text-indent: 0;
-    background: #FF9;
+    /*text-indent: 0;*/
+    /*background: #FF9;*/
     color: #000; 
     /*overflow: auto;*/
-    white-space: pre;
+    /*white-space: pre;*/
     margin: 0;
     padding: 0.5em;
-    border: thin solid}
+    font-size: x-large;
+    /*border: thin solid*/}
 div.vevent:hover pre {
     display: block;
     position: absolute}

@@ -230,12 +230,6 @@ title=\"%04d%02d%02d\">(whole</abbr> <abbr class=duration\n\
 title=\"1D\">day)</abbr></span>\n", start_utc.year, start_utc.month,
 	   start_utc.day);
 
-  /* Print the summary */
-  printf("<span class=summary>");
-  p = icalcomponent_get_first_property(ev.event, ICAL_SUMMARY_PROPERTY);
-  if (p) print_escaped(icalproperty_get_summary(p));
-  printf("</span>\n");
-
   /* If we want descriptions, check if there is one */
   if (do_description)
     desc = icalcomponent_get_first_property(ev.event, ICAL_DESCRIPTION_PROPERTY);
@@ -262,6 +256,12 @@ title=\"1D\">day)</abbr></span>\n", start_utc.year, start_utc.month,
     printf("</b>");
   }
   if (desc || loc) printf("</pre>\n");
+
+  /* Print the summary */
+  printf("<span class=summary>");
+  p = icalcomponent_get_first_property(ev.event, ICAL_SUMMARY_PROPERTY);
+  if (p) print_escaped(icalproperty_get_summary(p));
+  printf("</span>\n");
 
   printf("</div>\n\n");
 }
